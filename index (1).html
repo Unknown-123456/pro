@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EcoExplorer – Environmental Awareness</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: #e0f7fa;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: #00695c;
+      color: white;
+      padding: 2em;
+      text-align: center;
+      animation: fadeDown 1s ease-in-out;
+    }
+    nav {
+      background: #004d40;
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+      padding: 1em;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5em 1em;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background: #00796b;
+    }
+    section {
+      padding: 2em;
+      max-width: 900px;
+      margin: auto;
+    }
+    .topic {
+      background: #ffffff;
+      padding: 1em;
+      border-radius: 10px;
+      margin-bottom: 1em;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .topic:hover {
+      transform: scale(1.02);
+    }
+    .topic img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin: 1em 0;
+    }
+    #quiz-container {
+      background: #ffffff;
+      padding: 1.5em;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .question {
+      margin-bottom: 1em;
+    }
+    button {
+      padding: 0.5em 1em;
+      background: #00796b;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 1em;
+    }
+    button:hover {
+      background: #004d40;
+    }
+    footer {
+      text-align: center;
+      background: #00695c;
+      color: white;
+      padding: 1em;
+      margin-top: 2em;
+    }
+    @keyframes fadeDown {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🌍 EcoExplorer</h1>
+  <p>Protect our planet, it's the only one we’ve got.</p>
+</header>
+
+<nav>
+  <a href="#topics">Topics</a>
+  <a href="#quiz">Quiz</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="topics">
+  <h2>🌱 Environmental Topics</h2>
+  <div class="topic">
+    <h3>Pollution</h3>
+    <img src="p1.png" alt="Pollution" />
+    <img src="p2.png" alt="Pollution" />
+    <p>Pollution is the introduction of harmful substances or products into the environment. It can take many forms such as air pollution, water pollution, and land pollution. Air pollution is often caused by emissions from vehicles and factories. Water pollution comes from industrial waste, plastic dumping, and agricultural runoff. Land pollution is primarily due to garbage and industrial waste that is not disposed of properly. Pollution negatively impacts wildlife, ecosystems, and human health, contributing to respiratory diseases and waterborne illnesses. Reducing pollution involves using cleaner technologies, improving waste management, and raising awareness about sustainable practices.</p>
+  </div>
+  <div class="topic">
+    <h3>Climate Change</h3>
+    <img src="cc1.png" alt="Climate Change" />
+    <img src="cc2.png" alt="Climate Change" />
+    <p>Climate change refers to long-term shifts in temperatures and weather patterns. The primary cause is the increase of greenhouse gases such as carbon dioxide and methane in the atmosphere due to human activities like burning fossil fuels and deforestation. The consequences of climate change include rising sea levels, more frequent extreme weather events (like hurricanes and droughts), and disruption of natural habitats. Combating climate change requires global efforts such as reducing emissions, switching to renewable energy sources, conserving forests, and developing resilient infrastructure. Every small action—like using public transport or planting trees—contributes to the solution.</p>
+  </div>
+  <div class="topic">
+    <h3>Recycling</h3>
+    <img src="r1.png" alt="Recycling" />
+    <img src="r2.png" alt="Recycling" />
+    <p>Recycling is the process of converting waste materials into new products. It helps conserve natural resources, reduce landfill use, and lower greenhouse gas emissions. Common recyclable materials include paper, cardboard, glass, plastic, and metals. By separating recyclable items from regular trash and using designated recycling bins, we can ensure these materials are reused instead of ending up in landfills or oceans. Moreover, recycling supports the circular economy where resources are reused continuously, reducing the need for raw materials. Educating people about recycling and improving recycling systems are key to making this practice more effective.</p>
+  </div>
+  <div class="topic">
+    <h3>Renewable Energy</h3>
+    <img src="re1.png" alt="Renewable Energy" />
+    <img src="re1.png" alt="Renewable Energy" />
+    <p>Renewable energy comes from sources that are naturally replenished, such as sunlight, wind, rain, tides, and geothermal heat. Unlike fossil fuels, renewables produce little or no greenhouse gases, making them essential in the fight against climate change. Solar panels convert sunlight into electricity, wind turbines use air currents to generate power, and hydropower captures energy from moving water. Investing in renewable energy creates jobs, reduces pollution, and enhances energy security. Transitioning to clean energy requires policy support, technological innovation, and public commitment to sustainable choices.</p>
+  </div>
+</section>
+
+<section id="quiz">
+  <h2>🧠 Eco Quiz</h2>
+  <div id="quiz-container">
+    <div class="question">
+      <p>1. What gas is responsible for global warming?</p>
+      <input type="radio" name="q1" value="correct" /> CO₂<br />
+      <input type="radio" name="q1" value="wrong" /> O₂<br />
+      <input type="radio" name="q1" value="wrong" /> N₂<br />
+    </div>
+    <div class="question">
+      <p>2. Which is a renewable energy source?</p>
+      <input type="radio" name="q2" value="correct" /> Solar<br />
+      <input type="radio" name="q2" value="wrong" /> Coal<br />
+      <input type="radio" name="q2" value="wrong" /> Oil<br />
+    </div>
+    <button onclick="checkQuiz()">Submit Quiz</button>
+    <p id="quiz-result"></p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>📬 Contact Us</h2>
+  <form onsubmit="return showThanks()">
+    <input type="text" placeholder="Your Name" required />
+    <input type="email" placeholder="Your Email" required />
+    <textarea placeholder="Your Message" rows="4" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+  <p id="thanks-message" style="color: green; font-weight: bold;"></p>
+</section>
+
+<footer>
+  <p>© 2025 EcoExplorer</p>
+</footer>
+
+<script>
+  function checkQuiz() {
+    let score = 0;
+    const q1 = document.querySelector('input[name="q1"]:checked');
+    const q2 = document.querySelector('input[name="q2"]:checked');
+
+    if (q1 && q1.value === "correct") score++;
+    if (q2 && q2.value === "correct") score++;
+
+    const result = document.getElementById("quiz-result");
+    if (score === 2) {
+      result.textContent = "🎉 Excellent! You got all answers correct.";
+    } else {
+      result.textContent = `✅ You scored ${score}/2. Try again!`;
+    }
+  }
+
+  function showThanks() {
+    document.getElementById("thanks-message").textContent = "✅ Thank you for your message!";
+    return false; // prevent form submission
+  }
+</script>
+
+</body>
+</html>
